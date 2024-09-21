@@ -1,0 +1,33 @@
+{
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaVersion": 2020,
+        "sourceType": "module"
+    },
+    "plugins": [
+        "@typescript-eslint",
+        "jest"
+    ],
+    "extends": [
+        "eslint:recommended",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:jest/recommended",
+        "prettier"
+    ],
+    "env": {
+        "browser": true,
+        "es2021": true,
+        "jest": true
+    },
+    "rules": {
+      "semi": ["error", "always"],// セミコロンを必須にする
+      "no-unused-vars": "warn",// 未使用の変数を警告
+      "no-redeclare": "error",// 変数の再宣言を禁止
+      "quote-props": ["error", "as-needed"], // オブジェクトリテラルのキーをクォートするかどうか
+      "no-use-before-define": ["error", { "functions": false, "classes": true }], // 変数を宣言する前に使用することを禁止する
+        "@typescript-eslint/no-explicit-any": "warn", // any 型の使用に警告
+        "@typescript-eslint/explicit-module-boundary-types": "off", // 関数の戻り値の型を必須にしない
+        "jest/consistent-test-it": ["error", { "fn": "test", "withinDescribe": "it" }], // テスト関数の一貫性を保つ
+        "jest/no-disabled-tests": "warn" // 無効化されたテストに警告
+    }
+}
