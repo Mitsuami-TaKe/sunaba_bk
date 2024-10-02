@@ -1,0 +1,19 @@
+# Supabase
+.branches
+.temp
+.env
+# Supabaseローカル開発環境固有のファイル
+# ローカルの設定やキャッシュが保存されるフォルダ
+.supabase/   
+# ローカル環境ごとの設定ファイル
+supabase/config.toml  
+
+# 共有したいSupabaseリソース
+# Edge Functionsのコードを共有
+!supabase/functions/**  
+# マイグレーションファイルを共有
+!supabase/migrations/** 
+
+# Docker関連
+# ローカル用のDocker設定ファイル
+docker-compose.yml 
