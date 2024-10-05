@@ -3,7 +3,7 @@ name: Deploy Function
 on:
   push:
     branches:
-      - main
+      - feature_01_supabase_setup
   workflow_dispatch:
 
 jobs:
