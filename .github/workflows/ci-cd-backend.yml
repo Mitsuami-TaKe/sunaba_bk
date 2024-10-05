@@ -18,8 +18,15 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
+      # Supabase CLIのインストール
       - uses: supabase/setup-cli@v1
         with:
           version: latest
 
-      - run: supabase functions deploy --project-ref $SUPABASE_PROJECT_ID
+      # ディレクトリ構造を表示して、supabase/config.toml のパスを確認するデバッグステップ
+      - name: List files for debugging
+        run: ls -R ${{ github.workspace }}
+
+      # Supabase function のデプロイ
+      - name: Deploy Supabase Function
+        run: supabase functions deploy --project-ref $SUPABASE_PROJECT_ID
