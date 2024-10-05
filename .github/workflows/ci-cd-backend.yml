@@ -22,11 +22,6 @@ jobs:
       - uses: supabase/setup-cli@v1
         with:
           version: latest
-
-      # ディレクトリ構造を表示して、supabase/config.toml のパスを確認するデバッグステップ
-      - name: List files for debugging
-        run: echo $GITHUB_WORKSPACE
-
       # Supabase function のデプロイ
       - name: Deploy Supabase Function
-        run: supabase functions deploy --project-ref $SUPABASE_PROJECT_ID --config $SUPABASE_CONFIG_PATH
+        run: supabase functions deploy --project-ref $SUPABASE_PROJECT_ID 

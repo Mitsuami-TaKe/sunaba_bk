@@ -6,7 +6,7 @@
 # ローカルの設定やキャッシュが保存されるフォルダ
 .supabase/   
 # ローカル環境ごとの設定ファイル
-supabase/config.toml  
+!supabase/config.toml  
 
 # 共有したいSupabaseリソース
 # Edge Functionsのコードを共有
